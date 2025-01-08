@@ -1,0 +1,104 @@
+Q1. Explain with an example each when to use a for loop and a while loop.
+For Loop: Use when you know the number of iterations in advance.
+
+p
+for i in range(1, 6):
+    print(i)
+While Loop: Use when the number of iterations depends on a condition.
+
+python
+Copy code
+# Example: Print numbers from 1 to 5 using a while loop
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+Q2. Python Program to Print Sum and Product of the First 10 Natural Numbers
+Using For Loop:
+
+
+sum_for = 0
+product_for = 1
+
+for i in range(1, 11):
+    sum_for += i
+    product_for *= i
+
+print(f"Sum using for loop: {sum_for}")
+print(f"Product using for loop: {product_for}")
+Using While Loop:
+
+
+sum_while = 0
+product_while = 1
+i = 1
+
+while i <= 10:
+    sum_while += i
+    product_while *= i
+    i += 1
+
+print(f"Sum using while loop: {sum_while}")
+print(f"Product using while loop: {product_while}")
+
+Q3. Python Program to Compute Electricity Bill for a Household
+python
+
+units = int(input("Enter the electricity units consumed: "))
+bill = 0
+
+if units <= 100:
+    bill = units * 4.5
+elif units <= 200:
+    bill = (100 * 4.5) + (units - 100) * 6
+elif units <= 300:
+    bill = (100 * 4.5) + (100 * 6) + (units - 200) * 10
+else:
+    bill = (100 * 4.5) + (100 * 6) + (100 * 10) + (units - 300) * 20
+
+print(f"Total Electricity Bill: Rs. {bill}")
+Test Case:
+
+Input: 310
+Output: 2250
+Q4. Cube Calculation and Divisibility Check
+Using For Loop:
+
+
+numbers = list(range(1, 101))
+result_list = []
+
+for num in numbers:
+    cube = num ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        result_list.append(num)
+
+print("Numbers whose cubes are divisible by 4 or 5 (For Loop):", result_list)
+Using While Loop:
+
+numbers = list(range(1, 101))
+result_list = []
+i = 0
+
+while i < len(numbers):
+    cube = numbers[i] ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        result_list.append(numbers[i])
+    i += 1
+
+print("Numbers whose cubes are divisible by 4 or 5 (While Loop):", result_list)
+
+Q5. Filter and Count Vowels in a String
+
+string = "I want to become a data scientist"
+vowels = "aeiouAEIOU"
+vowel_count = 0
+vowel_list = []
+
+for char in string:
+    if char in vowels:
+        vowel_count += 1
+        vowel_list.append(char)
+
+print(f"Number of vowels: {vowel_count}")
+print(f"Vowels in the string: {vowel_list}")
